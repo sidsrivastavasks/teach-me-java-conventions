@@ -1,26 +1,27 @@
 package powerpackage;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class powertest {
     @Test
-    public void one_raised_to_one_is_onew() {
-        assert powerfinder.OF(1,1) == 1;
+    public void one_raised_to_one_is_one() {
+        Assertions.assertEquals(1, PowerFinder.getPowerOf(1,1));
     }
 
     @Test
-    public void twoRaised_to_one_is_2() {
-        assert powerfinder.OF(2,1) == 2;
+    public void two_raised_to_one_is_two() {
+        Assertions.assertEquals(2, PowerFinder.getPowerOf(2,1));
     }
 
     @Test
-    public void two_power_2_is_4() {
-        assert powerfinder.OF(2, 2) == 4;
+    public void two_raised_to_two_is_four() {
+        Assertions.assertEquals(4, PowerFinder.getPowerOf(2, 2));
     }
 
     @Test
-    public void power_of_2_and_3_Is_SIX() {
-        assert powerfinder.OF(3, 2) == 3*3;
+    public void three_raised_to_two_is_nine() {
+        Assertions.assertEquals(9, PowerFinder.getPowerOf(3, 2));
     }
 }
